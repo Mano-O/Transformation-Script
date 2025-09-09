@@ -64,14 +64,15 @@ print(result)
 
 # plotting section
 
+# show the points
 ax = plt.figure().add_subplot(111, projection = '3d')
 ax.scatter(points[:,0], points[:,1], points[:,2], c='blue', marker='s', label='Original')
 ax.scatter(result[:,0], result[:,1], result[:,2], c='red', marker='^', label='Transformed')
-
+# connect the dots with a line
 ax.plot(points[:,0], points[:,1], points[:,2], color='blue', alpha=0.5)
-
 ax.plot(result[:,0], result[:,1], result[:,2], color='red', alpha=0.5)
 
+# set labels and show plot
 ax.set_xlabel("X")
 ax.set_ylabel("Y")
 ax.set_zlabel("Z")
